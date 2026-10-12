@@ -1,0 +1,114 @@
+#!/bin/sh
+
+slice_term="sticky-term"
+CFG_TERM="$HOME/.config/bspwm/bin/.term"
+read -r MY_TERM <"$CFG_TERM"
+
+width_node=50  #%
+height_node=24 #%
+
+get_state_node() {
+	# -r: output strings without escapes and quotes
+	bspc query -T -n "$window_id" | jq -r "$1"
+}
+
+# Get geometry of current monitor
+get_monitor_geometry() {
+	read -r scre_width scre_height scre_pos_x scre_pos_y <<EOF
+$(bspc query -T -m focused | jq -r '.rectangle | "\(.width) \(.height) \(.x) \(.y)"')
+EOF
+}
+
+wait_for_term_id() {
+	attempts=0
+
+	while [ "$attempts" -lt 30 ]; do
+		window_id=$(get_term_id)
+
+		if [ -n "$window_id" ]; then
+			return 0
+		fi
+
+		sleep 0.1
+		attempts=$((attempts + 1))
+	done
+
+	return 1
+}
+
+calc_term_position() {
+	term_width=$((scre_width * width_node / 100))
+	term_height=$((scre_height * height_node / 100))
+	term_pos_x=$((scre_pos_x + (scre_width - term_width) / 2))
+	term_pos_y=$((scre_pos_y + scre_height - term_height))
+}
+
+# Find the window
+get_term_id() {
+	bspc query -N -n ".floating" | while read -r node; do
+		if xprop -id "$node" WM_CLASS | grep -q "$slice_term"; then
+			echo "$node"
+			return
+		fi
+	done
+}
+
+# xdo habla directamete con el servidor X11 y actualizar la ventana
+# envia operaciones de geometria a través de X11
+# evitando depender de como bspwm interpreta o aplica
+# esas ordenes de movimiento y redimensionamiento.
+
+update_resize_node() {
+	xdo move -x "$term_pos_x" -y "$term_pos_y" "$window_id" || return 1
+	xdo resize -w "$term_width" -h "$term_height" "$window_id" || return 1
+}
+
+get_scre_info() {
+	get_monitor_geometry
+	calc_term_position
+	window_id=$(get_term_id)
+}
+
+create_rule_bspc_node() {
+
+	bspc rule -a "$slice_term" \
+		state=floating \
+		sticky=on \
+		layer=above \
+		rectangle="${term_width}x${term_height}+${term_pos_x}+${term_pos_y}" \
+		-o
+}
+
+main() {
+	get_scre_info
+	if [ -n "$window_id" ]; then
+		current_state=$(get_state_node ".hidden")
+		if [ "$current_state" = "false" ]; then
+			bspc node "$window_id" -g hidden=on
+		else
+			if ! update_resize_node; then
+				echo "Error: no se pudo actualizar la geometria" >&2
+				return 1
+			fi
+			bspc node "$window_id" -g hidden=off -f
+		fi
+	else
+
+		create_rule_bspc_node
+
+		"$MY_TERM" -o window.opacity=1 --class "$slice_term" &
+
+		if wait_for_term_id; then
+			if ! update_resize_node; then
+				echo "Error: no se pudo actualizar la geometria" >&2
+				return 1
+			fi
+		else
+			echo "Error: no se encontro la ventana $slice_term" >&2
+			return 1
+		fi
+
+	fi
+}
+
+main
