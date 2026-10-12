@@ -1,0 +1,87 @@
+#!/bin/sh
+
+XRANDR_OUTPUT=$(xrandr --current)
+
+# Get only two first columns Monitor State,
+# And turn off the monitor if it's unplugged.
+
+echo "$XRANDR_OUTPUT" | while read -r monitor state _; do
+	[ "$state" = "disconnected" ] && xrandr --output "$monitor" --off
+done
+
+# Get the resolution and the actual rate of your monitor,
+# (*) means actual that you are using rate.
+# (+) means default in your monitor rate.
+
+get_monitor_info() {
+	echo "$XRANDR_OUTPUT" | awk -v monitor="$1" '$1 == monitor { getline; print $1, $2 }' | tr -d '*+'
+}
+
+# Get the primary monitor
+
+PRIMARY_MONITOR=$(echo "$XRANDR_OUTPUT" | awk '$2 == "connected" && $3 == "primary" { print $1; exit }')
+
+# Set the name of the monitor
+set -- $(echo "$XRANDR_OUTPUT" | awk '$2 == "connected" {print $1}')
+
+if [ -n "$PRIMARY_MONITOR" ]; then
+	rest=""
+	#	All command-line arguments as an array
+	for monitor in "$@"; do
+		[ "$monitor" != "$PRIMARY_MONITOR" ] && rest="$rest $monitor"
+	done
+	set -- "$PRIMARY_MONITOR" $rest
+fi
+
+# $# : Number of aguments when you run the ./script:
+# argument 0= './script' ...
+NUM_MONITORS=$#
+#-
+
+set_variables_monitors() {
+	# Set the aguments that are: rate and resolution..
+	set -- $(get_monitor_info "$1")
+}
+
+#-
+case $NUM_MONITORS in
+0)
+	echo "Warning: No connected monitors detected"
+	;;
+
+1)
+	# The argument comes of the first set...
+	monitor_1="$1"
+	set_variables_monitors "$monitor_1"
+	#set -- $(get_monitor_info "$monitor_1")
+	mode_1="$1" #-- Resolution
+	rate_1="$2" #-- Rate
+
+	xrandr --output "$monitor_1" --primary --mode "$mode_1" --pos 0x0 --auto --rate "$rate_1"
+	bspc monitor "$monitor_1" -d 1 2 3 4 5 6 7
+	;;
+
+2)
+	monitor_1="$1"
+	monitor_2="$2"
+
+	set_variables_monitors "$monitor_1"
+	mode_1="$1"
+	rate_1="$2"
+
+	set_variables_monitors "$monitor_2"
+	mode_2="$1"
+	rate_2="$2"
+
+	xrandr --output "$monitor_1" --primary --mode "$mode_1" --pos 0x0 --auto --rate "$rate_1" \
+		--output "$monitor_2" --mode "$mode_2" --right-of "$monitor_1" --auto --rate "$rate_2"
+	# --pos X-Y =  ejmp: 1920x1080 = monitor2   1920x1080 1920(X) x 0(Y)
+	bspc monitor "$monitor_1" -d 1 2 3 4
+	bspc monitor "$monitor_2" -d 5 6 7 8
+	bspc wm -O "$monitor_1" "$monitor_2"
+	;;
+
+*)
+	echo "Warning: Configuration not supported for more than 2 monitors"
+	;;
+esac
