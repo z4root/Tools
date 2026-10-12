@@ -1,5 +1,5 @@
 [[keyboard.bindings]]  
-key = "c"  
+key = "i"  
 mods = "Control"  
 action = "Copy"  
   
