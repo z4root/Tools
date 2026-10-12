@@ -1,3 +1,9 @@
+<div align="center">
+    <ul>
+        <li> <a href="./Arch-minimal/README.md" > Arch minimal environment </a> </li>
+    </ul>
+</div>
+
 <code>
                   /\
                  /  \     /\  .        *    snatbep@Dart ~]$  echo $T_ABOUT
@@ -24,9 +30,3 @@
       |________|              |________|
 
 </code>
-
-<div align="center">
-    <ul>
-        <li> <a href="./Arch-minimal/README.md" > Arch minimal environment </a> </li>
-    </ul>
-</div>
