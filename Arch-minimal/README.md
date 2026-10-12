@@ -17,6 +17,11 @@
 - obsidian & virt-manager (VM's)
 - shell: bash
 
+references: https://madnight.github.io/bspwm/
+references: https://github.com/gh0stzk/dotfiles/
+references: https://github.com/meskarune/i3lock-fancy
+https://github.com/baskerville/bspwm
+
 ### Screenshots
 
 |                                                                                   |                                                                                   |
