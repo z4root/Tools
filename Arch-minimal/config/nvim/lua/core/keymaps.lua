@@ -1,5 +1,5 @@
 --------------------------------
------------------------------- LeaderMap: <Espace> :3
+------------------------------ LeaderMap: <Espace>
 --------------------------------
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -8,13 +8,14 @@ vim.g.maplocalleader = " "
 ------------------------------ Clipboard
 --------------------------------
 
-vim.keymap.set("v", "<C-i>", '"+y', { desc = "Copy visual to clipboard" })
-vim.keymap.set("n", "<C-i>", '"+y', { desc = "Copy line to clipboard" })
+vim.keymap.set("v", "<C-c>", '"+y', { desc = "Copy visual to clipboard" })
+vim.keymap.set("n", "<C-c>", '"+y', { desc = "Copy line to clipboard" })
 
 vim.keymap.set("n", "<C-v>", '"+p', { desc = "Paste from clipboard" })
 vim.keymap.set("v", "<C-v>", '"+p', { desc = "Paste from clipboard" })
 vim.keymap.set("i", "<C-v>", "<C-R>+", { desc = "Paste from clipboard in insert mode" })
 
+vim.keymap.set("i", "jk", "<Esc>", { desc = "Mapear 'jk' para salir del modo insertar" })
 ----------------
 -------------- End Clipboard
 ----------------
@@ -75,6 +76,15 @@ vim.keymap.set("n", "<C-A-h>", ":vertical resize -2<CR>", { desc = "Decrease win
 vim.keymap.set("n", "<C-A-l>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
 vim.keymap.set("n", "<leader>vn", function()
+	vim.ui.input({ prompt = "File name: " }, function(input)
+		if input then
+			local pwd = vim.fn.getcwd() .. "/"
+			vim.cmd("vnew " .. pwd .. input)
+		end
+	end)
+end, { desc = "Create new vertical split with file" })
+
+vim.keymap.set("n", "<leader>vs", function()
 	vim.ui.input({ prompt = "File name: " }, function(input)
 		if input then
 			local pwd = vim.fn.getcwd() .. "/"
