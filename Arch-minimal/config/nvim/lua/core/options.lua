@@ -1,7 +1,10 @@
 -- Basic settings
+vim.opt.laststatus = 3
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
-vim.opt.cursorline = false -- Highlight current line
+-- vim.opt.cursorline = false -- Highlight current line
+-- vim.opt.cursorline = true
+-- vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1f26" }) -- Ajusta este color según el tema de Alacritty que elijas
 vim.opt.wrap = true -- Don't wrap lines
 vim.opt.scrolloff = 12 -- Keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- Keep 8 columns left/right of cursor
@@ -35,6 +38,7 @@ vim.opt.concealcursor = "" -- Don't hide cursor line markup
 vim.opt.lazyredraw = true -- Don't redraw during macros
 vim.opt.synmaxcol = 500 -- Syntax highlighting limit
 vim.opt.fillchars = { eob = " " } -- Hide ~ on empty lines in your files
+vim.opt.guicursor = "n-v-c:block,i-c-ci-ve:ver25,r-cr-o:hor20" -- Cambiar la forma del cursor segun el modo
 
 -- File handling
 vim.opt.backup = false -- Don't create backup files
