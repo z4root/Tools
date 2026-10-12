@@ -1,5 +1,3 @@
-local M = {}
-
 -- Git branch
 local cached_branch = ""
 local last_check = 0
@@ -63,14 +61,12 @@ local function mode_color()
 	}
 	return colors[mode] or "%#StatusLineNormal#"
 end
-
 function M.setup()
-	-- Define highlight groups para colores
-	vim.cmd("highlight StatusLineNormal guifg=#FFFFFF guibg=#2E3440")
-	vim.cmd("highlight StatusLineInsert guifg=#000000 guibg=#A3BE8C")
-	vim.cmd("highlight StatusLineVisual guifg=#000000 guibg=#EBCB8B")
-	vim.cmd("highlight StatusLineCommand guifg=#000000 guibg=#B48EAD")
-	vim.cmd("highlight StatusLineReplace guifg=#000000 guibg=#BF616A")
+	vim.cmd("highlight StatusLineNormal guifg=#d1d1d1 guibg=#121212")
+	vim.cmd("highlight StatusLineInsert guifg=#000000 guibg=#b5c99a") -- Verde Lima Mate
+	vim.cmd("highlight StatusLineVisual guifg=#000000 guibg=#ffb3a7") -- Salmon
+	vim.cmd("highlight StatusLineCommand guifg=#000000 guibg=#c3a6ff") -- Violeta
+	vim.cmd("highlight StatusLineReplace guifg=#000000 guibg=#e66b6b") -- Rojo Mate
 
 	vim.opt.statusline = table.concat({
 		"%{v:lua.require'config.statusline'.mode_color()}",
