@@ -1,11 +1,17 @@
 [general]
-import = ["colors.toml", "fonts.toml", "keybinds.toml"]
+import=["themes/abismo_bioluminiscente.toml", "fonts.toml", "keybinds.toml"]
 
 [selection]
-save_to_clipboard = true
+save_to_clipboard=true
 
 [window]
-decorations= "None"
-padding = {x=7,y=7}
-opacity= 0.85
+decorations="None"
+padding={x=12,y=12}
+dynamic_padding = false
+opacity=0.85
 
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[scrolling]
+history = 5000 
