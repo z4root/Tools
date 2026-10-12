@@ -1,7 +1,6 @@
 -- Opciones y keymaps
 require("core.options")
 require("core.keymaps")
-require("core.colors")
 
 -- Plugins
 require("plugins")
@@ -14,4 +13,5 @@ require("config.emmet") -- emmet (miau)
 require("markdown-plus")
 
 -- UI (sip)
-require("ui.statusline")
+-- require("ui.statusline")
+require("ui.themes.init")
