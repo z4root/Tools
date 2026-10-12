@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Only if you have 1 or more monitors....
+update_sticky_node() {
+	bspc subscribe monitor_focus | while read -r _; do
+		get_scre_info
+		if [ -n "$window_id" ]; then
+			state=$(get_state_node ".client.state")
+			if [ "$state" = "floating" ]; then
+				set_focused_node
+				update_resize_node
+			fi
+		fi
+	done &
+
+}
+
