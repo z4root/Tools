@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#000000" 
+foreground = "#ffffff" 
+
+[colors.cursor]
+text = "#000000"
+cursor = "#ffffff"
+
+[colors.normal]
+black = "#1a1a1a"
+red = "#ff4500"    # Naranja Solar
+green = "#00ff00"
+yellow = "#ffff00"
+blue = "#0000ff"   # Azul Eléctrico
+magenta = "#ff00ff" # Magenta Cósmico
+cyan = "#00ffff"
+white = "#ffffff"
+
+[colors.bright]
+black = "#333333"
+red = "#ff6347"
+green = "#7fff00"
+yellow = "#ffff8d"
+blue = "#1e90ff"
+magenta = "#da70d6"
+cyan = "#afeeee"
+white = "#ffffff"
+

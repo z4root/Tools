@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#e5e5e7" # Platino frío
+foreground = "#3a3a3c" # Gris oscuro
+
+[colors.cursor]
+text = "#e5e5e7"
+cursor = "#b76e79" # Oro Rosado
+
+[colors.normal]
+black = "#636366"
+red = "#b76e79"    # Rose Gold
+green = "#84a98c"
+yellow = "#d4af37"
+blue = "#5a7d9a"
+magenta = "#a6808c"
+cyan = "#7ba7a7"
+white = "#ffffff"
+
+[colors.bright]
+black = "#8e8e93"
+red = "#d19a9a"
+green = "#a0c0a0"
+yellow = "#e6be4d"
+blue = "#7da0c0"
+magenta = "#c494a0"
+cyan = "#9abcbc"
+white = "#ffffff"
+

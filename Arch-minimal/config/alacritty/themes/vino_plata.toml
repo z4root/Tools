@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#1a0f0f" # Rojo vino casi negro
+foreground = "#d1ccc0" # Plata envejecido
+
+[colors.cursor]
+text = "#1a0f0f"
+cursor = "#ff4d4d"
+
+[colors.normal]
+black = "#2d1a1a"
+red = "#e63946"
+green = "#a8dadc" # Contraste frío
+yellow = "#f1faee"
+blue = "#457b9d"
+magenta = "#ffb703"
+cyan = "#8ecae6"
+white = "#f2f2f2"
+
+[colors.bright]
+black = "#4a2a2a"
+red = "#ff6b6b"
+green = "#b2fef2"
+yellow = "#ffffff"
+blue = "#a2d2ff"
+magenta = "#ffd166"
+cyan = "#caffbf"
+white = "#ffffff"

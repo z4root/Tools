@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#0d110d" 
+foreground = "#b8c4a0" 
+
+[colors.cursor]
+text = "#0d110d"
+cursor = "#ffcc00"
+
+[colors.normal]
+black = "#050705"
+red = "#a52a2a"
+green = "#4b5320"
+yellow = "#ffcc00" # Amarillo advertencia
+blue = "#483d8b"
+magenta = "#800080"
+cyan = "#2f4f4f"
+white = "#9ca68c"
+
+[colors.bright]
+black = "#1a201a"
+red = "#cd5c5c"
+green = "#6b8e23"
+yellow = "#ffff00"
+blue = "#6a5acd"
+magenta = "#ba55d3"
+cyan = "#708090"
+white = "#c0d0b0"
+

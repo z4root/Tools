@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#1e222a" # Gris pizarra
+foreground = "#abb2bf" # Plata mate
+
+[colors.cursor]
+text = "#1e222a"
+cursor = "#d19a66"
+[colors.normal]
+
+black = "#282c34"
+red = "#e06c75"    # Rojo suave
+green = "#98c379"  # Verde hoja
+yellow = "#d19a66" # Bronce/Oro
+blue = "#61afef"   # Azul brillante
+magenta = "#c678dd" # Púrpura
+cyan = "#56b6c2"   # Cian
+white = "#abb2bf"
+
+[colors.bright]
+black = "#3e4451"
+red = "#ef596f"
+green = "#a5d6ff"
+yellow = "#e5c07b"
+blue = "#61afef"
+magenta = "#d489dc"
+cyan = "#66c0d1"
+white = "#ffffff"

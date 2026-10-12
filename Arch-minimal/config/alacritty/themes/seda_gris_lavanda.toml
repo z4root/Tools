@@ -1,0 +1,31 @@
+[colors.primary]
+background = "#8e8e93" # Gris seda
+foreground = "#2c2c2e" # Negro suave
+
+[colors.cursor]
+text = "#8e8e93"
+cursor = "#b19cd9" # Lavanda
+
+[colors.normal]
+black = "#5e5e63"
+red = "#c06c84"
+green = "#7c9473"
+yellow = "#d4af37"
+blue = "#6a5acd" # Slate Blue
+magenta = "#b19cd9" # Lavanda
+cyan = "#87ceeb"
+white = "#f0f0f0"
+
+[colors.bright]
+black = "#a0a0a5"
+red = "#d68da0"
+green = "#9ab39a"
+yellow = "#e6be4d"
+blue = "#8a7bc0"
+magenta = "#d1bce0"
+cyan = "#b0e2ff"
+white = "#ffffff"
+
+
+
+

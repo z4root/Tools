@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#12141a" 
+foreground = "#c5b358" 
+
+[colors.cursor]
+text = "#12141a"
+cursor = "#c5b358"
+
+[colors.normal]
+black = "#1c1f26"
+red = "#8b4513" # Bronce
+green = "#556b2f" # Oliva oscuro
+yellow = "#daa520" # Oro
+blue = "#4682b4" # Acero
+magenta = "#704264"
+cyan = "#5f9ea0"
+white = "#a9a9a9"
+
+[colors.bright]
+black = "#2a2e38"
+red = "#cd853f"
+green = "#6b8e23"
+yellow = "#ffd700"
+blue = "#6495ed"
+magenta = "#9370db"
+cyan = "#87ceeb"
+white = "#d3d3d3"
+

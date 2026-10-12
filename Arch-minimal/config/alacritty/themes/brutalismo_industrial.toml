@@ -1,0 +1,29 @@
+[colors.primary]
+background = "#1c1c1c" 
+foreground = "#dcdcdc" 
+
+[colors.cursor]
+text = "#1c1c1c"
+cursor = "#ff6600"
+
+[colors.normal]
+black = "#121212"
+red = "#ff6600"    # El único color vivo
+green = "#5a5a5a"
+yellow = "#8a8a8a"
+blue = "#4a4a4a"
+magenta = "#6a6a6a"
+cyan = "#7a7a7a"
+white = "#eeeeee"
+
+[colors.bright]
+black = "#333333"
+red = "#ff8533"
+green = "#7a7a7a"
+yellow = "#ababab"
+blue = "#6a6a6a"
+magenta = "#8a8a8a"
+cyan = "#9a9a9a"
+white = "#ffffff"
+
+

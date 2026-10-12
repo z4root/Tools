@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#1b1820" # Púrpura ceniza
+foreground = "#e2d6f0" # Lavanda pálido
+
+[colors.cursor]
+text = "#1b1820"
+cursor = "#c084fc"
+
+[colors.normal]
+black = "#2a2432"
+red = "#ff758f"
+green = "#a7f3d0" # Menta mate
+yellow = "#fde68a"
+blue = "#818cf8"
+magenta = "#c084fc"
+cyan = "#22d3ee"
+white = "#f5f3ff"
+
+[colors.bright]
+black = "#3f374a"
+red = "#ff8fa3"
+green = "#d1fae5"
+yellow = "#fef3c7"
+blue = "#a5b4fc"
+magenta = "#d8b4fe"
+cyan = "#cffafe"
+white = "#ffffff"
+

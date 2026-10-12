@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#1b1d18" # Verde bosque abisal
+foreground = "#dcdcdc" # Blanco humo
+
+[colors.cursor]
+text = "#1b1d18"
+cursor = "#e6c07b"
+
+[colors.normal]
+black = "#2a2d26"
+red = "#e06c75"    # Rojo terracota
+green = "#98c379"  # Verde manzana mate
+yellow = "#e6c07b" # Oro viejo
+blue = "#61afef"   # Azul cielo
+magenta = "#c678dd" # Púrpura orquídea
+cyan = "#56b6c2"   # Turquesa
+white = "#abb2bf"
+
+[colors.bright]
+black = "#3e423a"
+red = "#f0848a"
+green = "#b5cea8"
+yellow = "#f5d090"
+blue = "#8ec0ff"
+magenta = "#d393e0"
+cyan = "#80cbc4"
+white = "#ffffff"
+

@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#000000" # Negro puro
+foreground = "#d1d1d1" # Gris platino
+
+[colors.cursor]
+text = "#000000"
+cursor = "#88c0d0"
+
+[colors.normal]
+black = "#1a1a1a"
+red = "#bf616a"    # Rojo desaturado
+green = "#a3be8c"  # Verde musgo claro
+yellow = "#ebcb8b" # Amarillo arena
+blue = "#81a2be"   # Azul acero
+magenta = "#b48ead" # Lavanda oscuro
+cyan = "#88c0d0"   # Cian ártico
+white = "#e5e9f0"
+
+[colors.bright]
+black = "#3b4252"
+red = "#d08770"
+green = "#b8cda3"
+yellow = "#f0c674"
+blue = "#88c0d0"
+magenta = "#cda5d1"
+cyan = "#8fbcbb"
+white = "#eceff4"

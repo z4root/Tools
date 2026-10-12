@@ -1,0 +1,29 @@
+[colors.primary]
+background = "#121212" # Carbón cálido
+foreground = "#e0d7c6" # Pergamino
+
+[colors.cursor]
+text = "#121212"
+cursor = "#e0d7c6"
+
+[colors.normal]
+black = "#1c1c1c"
+red = "#b94a48" # Rojo ladrillo
+green = "#7a9a7a"
+yellow = "#c9a66b"
+blue = "#5a7d9a"
+magenta = "#8e6b8e"
+cyan = "#6b8e8e"
+white = "#b0aaa0"
+
+[colors.bright]
+black = "#2d2d2d"
+red = "#d66d6d"
+green = "#9ab39a"
+yellow = "#dbc08a"
+blue = "#7da0c0"
+magenta = "#a683a6"
+cyan = "#8dbdbd"
+white = "#e0d7c6"
+
+

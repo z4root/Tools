@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#12100e" 
+foreground = "#c9b081" 
+
+[colors.cursor]
+text = "#12100e"
+cursor = "#8b0000"
+
+[colors.normal]
+black = "#0a0807"
+red = "#8b0000"    # Sangre seca
+green = "#556b2f"   # Oliva oscuro
+yellow = "#b8860b"
+blue = "#4682b4"
+magenta = "#704264"
+cyan = "#5f9ea0"
+white = "#a89984"
+
+[colors.bright]
+black = "#1f1d1b"
+red = "#b22222"
+green = "#6b8e23"
+yellow = "#daa520"
+blue = "#6495ed"
+magenta = "#9370db"
+cyan = "#87ceeb"
+white = "#d2b48c"
+

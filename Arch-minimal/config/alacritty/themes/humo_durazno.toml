@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#2d2d2d" # Gris ceniza
+foreground = "#ece0d1" # Crema
+
+[colors.cursor]
+text = "#2d2d2d"
+cursor = "#ffb08e" # Durazno
+
+[colors.normal]
+black = "#3d3d3d"
+red = "#ffb08e"    # Durazno
+green = "#b2d8d8"   # Menta pálida
+yellow = "#f2d2a9"
+blue = "#a8c0ff"
+magenta = "#d4a5a5"
+cyan = "#b0e0e6"
+white = "#ece0d1"
+
+[colors.bright]
+black = "#4d4d4d"
+red = "#ffc4b0"
+green = "#cceeed"
+yellow = "#f9e2c4"
+blue = "#c0d0ff"
+magenta = "#e0b8b8"
+cyan = "#c0eff2"
+white = "#ffffff"

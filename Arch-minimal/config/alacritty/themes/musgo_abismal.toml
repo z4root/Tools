@@ -1,0 +1,27 @@
+[colors.primary]
+background = "#161b14" # Verde musgo oscuro
+foreground = "#c9cdae" # Crema verdoso
+
+[colors.cursor]
+text = "#161b14"
+cursor = "#d4a373"
+
+[colors.normal]
+black = "#222a1f"
+red = "#bc6c25" # Terracota
+green = "#606c38"
+yellow = "#dda15e"
+blue = "#a3b18a"
+magenta = "#bca0ff" # Toque disruptivo
+cyan = "#8da9c4"
+white = "#e9edc9"
+
+[colors.bright]
+black = "#3a4732"
+red = "#da9043"
+green = "#a7c957"
+yellow = "#ffb703"
+blue = "#cce2cb"
+magenta = "#d8b4fe"
+cyan = "#90e0ef"
+white = "#fefae0"

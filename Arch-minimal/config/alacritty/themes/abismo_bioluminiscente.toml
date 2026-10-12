@@ -1,0 +1,28 @@
+[colors.primary]
+background = "#050a0f" 
+foreground = "#d0f0f0" 
+
+[colors.cursor]
+text = "#050a0f"
+cursor = "#ff7f50"
+
+[colors.normal]
+black = "#0a121a"
+red = "#ff7f50"    # Coral
+green = "#40e0d0"   # Turquesa mate
+yellow = "#f4a460"
+blue = "#4682b4"
+magenta = "#9370db" # Púrpura abisal
+cyan = "#87ceeb"
+white = "#e0ffff"
+
+[colors.bright]
+black = "#16222d"
+red = "#ff8c66"
+green = "#66ffcc"
+yellow = "#ffb380"
+blue = "#5f9ea0"
+magenta = "#b19cd9"
+cyan = "#b0e0e6"
+white = "#ffffff"
+
