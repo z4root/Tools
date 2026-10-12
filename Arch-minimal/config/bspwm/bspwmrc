@@ -1,0 +1,95 @@
+#!/bin/sh
+
+export PATH="$HOME/.config/bspwm/bin:$PATH"
+export XDG_CURRENT_DESKTOP='bspwm'
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+########
+# =============== Monitors =========================================
+########
+
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+#
+# When monitors overlap, keep only the larger one.
+#
+
+bspc config merge_overlapping_monitors true
+
+setup_monitor
+
+########
+# =============== Space and Windows =================================
+########
+
+bspc config borderless_monocle false
+bspc config gapless_monocle false
+bspc config paddingless_monocle false
+bspc config honor_size_hints false
+bspc config single_monocle true
+bspc config border_width 0
+bspc config window_gap 5
+
+#
+# Chooses the insertion algorithm,
+# How the binary partitioning tree expands.
+# Spiral: diagonal.
+# alternative (by default): normal.
+# long_side: The window will be attached as if the insertion point was in manual mode
+#
+
+bspc config automatic_scheme longest_side
+
+#
+# Determines on which side a new window is attached in an automatic split.
+# second_child -> right (By default)
+# first_child -> left
+#
+
+bspc config initial_polarity second_child
+bspc config removal_adjustment true
+
+########
+# =============== Pointer Actions ===================================
+########
+
+#
+# mod4 - Super/Windows key (recommended)
+# mod1 - Alt key
+# control - Control key
+#
+
+#bspc config focus_follows_pointer true
+#bspc config pointer_follows_focus true
+#bspc config pointer_follows_monitor true
+
+#
+# action1: left-click; move: drag to move the window
+# action2: middle-click; resize_side:	Drag to resize by nearest edge
+# action3: right-click; resize_corner: Drag to resize by corner edge
+#
+
+bspc config pointer_modifier mod4
+bspc config pointer_action1 mov
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config pointer_motion_interval 10
+
+########
+# =============== Start demons ======================================
+########
+
+#
+# It's more aggresive, because I'm only use sxhkd
+# if I change something in sxhkd, I kill the process
+# And start again with the new config
+#
+
+run() {
+	pkill -x "$1"
+	sleep 0.15
+	"$@" &
+}
+
+run sxhkd -c "$HOME/.config/bspwm/sxhkdrc"
