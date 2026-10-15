@@ -4,17 +4,17 @@
 
 ```bash
                   /\
-                 /  \     /\  .     * snatbep@Dart ~]$  echo $T_ABOUT
+                 /  \     /\  .     * 
               __/    \___/  \__
-            __/              \__        Hi, here you'll find the tools  and
+            __/              \__      snatbep@Dart ~]$  echo $T_ABOUT
            /     ___ __ ___    \
-          /    /  *      *  \    \      I used to solve my network problems
-         |    |  [x]   (O)   |    |
-         |    |   \_____/    |    |  *  I shared my configuration files
-         |    |  .  |  |  .  |    |     (I'm using Arch Linux for now --help ).
-          \    \___/    \___/    /
-           \________    ________/
-           ___|     |  |      |___
+          /    /  *      *  \    \      
+         |    |  [x]   (O)   |    |     Hi, here you'll find the tools  and
+         |    |   \_____/    |    |  *    I used to solve my network problems
+         |    |  .  |  |  .  |    |        I shared my configuration files
+          \    \___/    \___/    /       
+           \________    ________/        
+           ___|     |  |      |___         (I'm using Arch Linux for now --help ).
         __/         |  |          \__
        /    ________|  |_________    \ *
 
