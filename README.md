@@ -11,7 +11,7 @@
           /    /  *      *  \    \      I used to solve my network problems
          |    |  [x]   (O)   |    |
          |    |   \_____/    |    |  *  I shared my configuration files
-         |    |  .  |  |  .  |    |     (I now use Arch Linux --help ).
+         |    |  .  |  |  .  |    |     (I'm using Arch Linux for now --help ).
           \    \___/    \___/    /
            \________    ________/
            ___|     |  |      |___
