@@ -1,3 +1,7 @@
+#### Tools
+
+- [Dotfiles Arch Linux Minimal](./Arch-minimal/README.md)
+
 ```bash
                   /\
                  /  \     /\  .     * snatbep@Dart ~]$  echo $T_ABOUT
@@ -24,7 +28,3 @@
       |________|              |________|
 
 ```
-
-#### Tools
-
-- [Dotfiles Arch Linux Minimal](./Arch-minimal/README.md)
