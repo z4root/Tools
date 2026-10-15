@@ -3,18 +3,18 @@
                  /  \     /\  .     * snatbep@Dart ~]$  echo $T_ABOUT
               __/    \___/  \__
             __/              \__        Hi, here you'll find the tools  and
-           /     ___ __ ___    \        I used to solve my network problems
-          /    /  *      *  \    \      I shared my configuration files (I now use Arch Linux --help ).
-         |    |  [x]   (O)   |    |      .
-         |    |   \_____/    |    |  * snatbep@Dart ~]$  echo $T_NAMES
+           /     ___ __ ___    \
+          /    /  *      *  \    \      I used to solve my network problems
+         |    |  [x]   (O)   |    |
+         |    |   \_____/    |    |  *  I shared my configuration files (I now use Arch Linux --help ).
          |    |  .  |  |  .  |    |
-          \    \___/    \___/    /      + Dotfiles-Arch-minimal: “My minimalist, customizable environment for my workflow”
-           \________    ________/       + setup_networ: “iwd + systemd-network + systemd-resolved and create bridges”
+          \    \___/    \___/    /
+           \________    ________/
            ___|     |  |      |___
         __/         |  |          \__
-       /    ________|  |_________    \ * snatbep@Dart ~]$  echo $T_FUTURE
+       /    ________|  |_________    \ *
       /    /                    \    \
-      |    |   [ x ] ( & ) [ Y ]  |   |   Hmm. I don't know....
+      |    |   [ x ] ( & ) [ Y ]  |   |
       |    |   ----------------   |   |
       |    |   |       |      |   |    |
       |    |   |      _|_     |   |    |
@@ -27,4 +27,4 @@
 
 #### Tools
 
-- [Dotfiles Arch Linux Minima](./Arch-minimal/README.md)
+- [Dotfiles Arch Linux Minimal](./Arch-minimal/README.md)
