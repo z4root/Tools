@@ -1,19 +1,6 @@
-local temas = {
-	[1] = {
-		name = "Default",
-		fg = "#d0d0d0",
-		comment = "#858585",
-		keyword = "#b495bc",
-		function_col = "#8da7c7",
-		variable = "#d0d0d0",
-		operator = "#8bbdbc",
-		string = "#a2c293",
-		constant = "#d5bd7e",
-		type = "#8da7c7",
-	},
-
-	[2] = {
-		name = "Matrix Clasico",
+local themes = {
+	["1"] = {
+		name = "Matrix Classic",
 		fg = "#00ff41",
 		comment = "#008f27",
 		keyword = "#ff55ff",
@@ -25,8 +12,8 @@ local temas = {
 		type = "#7777ff",
 	},
 
-	[3] = {
-		name = "Vintage Ambar",
+	["2"] = {
+		name = "Industrial",
 		fg = "#ffb000",
 		comment = "#a88b69",
 		keyword = "#aa7aab",
@@ -38,7 +25,7 @@ local temas = {
 		type = "#8a9abb",
 	},
 
-	[4] = {
+	["3"] = {
 		name = "Cyber Obsidian",
 		fg = "#cba6f7",
 		comment = "#7f849c",
@@ -51,7 +38,20 @@ local temas = {
 		type = "#89b4fa",
 	},
 
-	[5] = {
+	["4"] = {
+		name = "Emerald Void",
+		fg = "#c9d1d9",
+		comment = "#5c6370",
+		keyword = "#70c0b0",
+		function_col = "#82aaff",
+		variable = "#e0e0e0",
+		operator = "#f0c674",
+		string = "#b8bb26",
+		constant = "#ffb86c",
+		type = "#82aaff",
+	},
+
+	["5"] = {
 		name = "Industrial Rust",
 		fg = "#d4c5b9",
 		comment = "#92867b",
@@ -64,7 +64,7 @@ local temas = {
 		type = "#66a3a3",
 	},
 
-	[6] = {
+	["6"] = {
 		name = "Deep Matrix",
 		fg = "#88cc88",
 		comment = "#66806f",
@@ -77,7 +77,7 @@ local temas = {
 		type = "#7a9aba",
 	},
 
-	[7] = {
+	["7"] = {
 		name = "Midnight Crimson",
 		fg = "#e0e0e0",
 		comment = "#85859b",
@@ -90,7 +90,7 @@ local temas = {
 		type = "#8b82e8",
 	},
 
-	[8] = {
+	["8"] = {
 		name = "Desert Night",
 		fg = "#d1d1d1",
 		comment = "#9298a0",
@@ -103,7 +103,7 @@ local temas = {
 		type = "#7da0c0",
 	},
 
-	[9] = {
+	["9"] = {
 		name = "Vino y Plata",
 		fg = "#d1ccc0",
 		comment = "#947979",
@@ -116,7 +116,7 @@ local temas = {
 		type = "#a2d2ff",
 	},
 
-	[10] = {
+	["10"] = {
 		name = "Musgo Abismal",
 		fg = "#c9cdae",
 		comment = "#899078",
@@ -129,7 +129,7 @@ local temas = {
 		type = "#cce2cb",
 	},
 
-	[11] = {
+	["11"] = {
 		name = "Orquidea Nocturna",
 		fg = "#e2d6f0",
 		comment = "#a097ad",
@@ -142,7 +142,7 @@ local temas = {
 		type = "#a5b4fc",
 	},
 
-	[12] = {
+	["12"] = {
 		name = "Cobre y Acero",
 		fg = "#b8a38d",
 		comment = "#85899f",
@@ -155,7 +155,7 @@ local temas = {
 		type = "#60a5fa",
 	},
 
-	[13] = {
+	["13"] = {
 		name = "Humo de Carbon",
 		fg = "#e0d7c6",
 		comment = "#89847b",
@@ -168,7 +168,7 @@ local temas = {
 		type = "#7da0c0",
 	},
 
-	[14] = {
+	["14"] = {
 		name = "Neon-Noir",
 		fg = "#ffb3a7",
 		comment = "#9298a5",
@@ -181,7 +181,7 @@ local temas = {
 		type = "#a2c2e0",
 	},
 
-	[15] = {
+	["15"] = {
 		name = "Petro Violet",
 		fg = "#c3a6ff",
 		comment = "#779595",
@@ -194,7 +194,7 @@ local temas = {
 		type = "#88aacc",
 	},
 
-	[16] = {
+	["16"] = {
 		name = "Desert Ghost",
 		fg = "#a8d5ba",
 		comment = "#8c8d7f",
@@ -207,7 +207,7 @@ local temas = {
 		type = "#9ab3c4",
 	},
 
-	[17] = {
+	["17"] = {
 		name = "Cold Steel",
 		fg = "#c5b358",
 		comment = "#858578",
@@ -220,7 +220,7 @@ local temas = {
 		type = "#6495ed",
 	},
 
-	[18] = {
+	["18"] = {
 		name = "Void Organic",
 		fg = "#b5c99a",
 		comment = "#808878",
@@ -233,7 +233,7 @@ local temas = {
 		type = "#8da6c4",
 	},
 
-	[19] = {
+	["19"] = {
 		name = "Brutalismo Industrial",
 		fg = "#dcdcdc",
 		comment = "#929292",
@@ -246,8 +246,8 @@ local temas = {
 		type = "#9a9a9a",
 	},
 
-	[20] = {
-		name = "Abismo Bioluminiscente",
+	["20"] = {
+		name = "abismo_bioluminiscente",
 		fg = "#d0f0f0",
 		comment = "#8299a8",
 		keyword = "#b19cd9",
@@ -259,7 +259,7 @@ local temas = {
 		type = "#87ceeb",
 	},
 
-	[21] = {
+	["21"] = {
 		name = "Scribe Noir",
 		fg = "#c9b081",
 		comment = "#8b8170",
@@ -272,7 +272,7 @@ local temas = {
 		type = "#6495ed",
 	},
 
-	[22] = {
+	["22"] = {
 		name = "Decaimiento Radiactivo",
 		fg = "#b8c4a0",
 		comment = "#77806b",
@@ -285,7 +285,7 @@ local temas = {
 		type = "#6a5acd",
 	},
 
-	[23] = {
+	["23"] = {
 		name = "Eclipse Total",
 		fg = "#ffffff",
 		comment = "#999999",
@@ -298,7 +298,7 @@ local temas = {
 		type = "#1e90ff",
 	},
 
-	[24] = {
+	["24"] = {
 		name = "Museo Minimalista",
 		fg = "#4a4a4a",
 		comment = "#77776f",
@@ -311,7 +311,7 @@ local temas = {
 		type = "#557db5",
 	},
 
-	[25] = {
+	["25"] = {
 		name = "Seda Gris y Lavanda",
 		fg = "#2c2c2e",
 		comment = "#49494f",
@@ -324,8 +324,8 @@ local temas = {
 		type = "#4540a0",
 	},
 
-	[26] = {
-		name = "Humo y Durazno",
+	["26"] = {
+		name = "",
 		fg = "#ece0d1",
 		comment = "#aaa095",
 		keyword = "#e0b8b8",
@@ -337,7 +337,7 @@ local temas = {
 		type = "#c0d0ff",
 	},
 
-	[27] = {
+	["27"] = {
 		name = "Platino y Oro Rosado",
 		fg = "#3a3a3c",
 		comment = "#69696e",
@@ -350,7 +350,7 @@ local temas = {
 		type = "#42647c",
 	},
 
-	[28] = {
+	["28"] = {
 		name = "Deep Nebula",
 		fg = "#a9b1d6",
 		comment = "#737da5",
@@ -363,7 +363,7 @@ local temas = {
 		type = "#89ddff",
 	},
 
-	[29] = {
+	["29"] = {
 		name = "Obsidian Frost",
 		fg = "#d1d1d1",
 		comment = "#858b98",
@@ -376,7 +376,7 @@ local temas = {
 		type = "#88c0d0",
 	},
 
-	[30] = {
+	["30"] = {
 		name = "Forest Logic",
 		fg = "#dcdcdc",
 		comment = "#929687",
@@ -389,7 +389,7 @@ local temas = {
 		type = "#8ec0ff",
 	},
 
-	[31] = {
+	["31"] = {
 		name = "Slate Luxury",
 		fg = "#abb2bf",
 		comment = "#777e8b",
@@ -401,126 +401,6 @@ local temas = {
 		constant = "#e5c07b",
 		type = "#61afef",
 	},
-	-- Genericos....
-	[32] = {
-		fg = "#E0E0E0",
-		comment = "#6272a4",
-		keyword = "#ff79c6",
-		function_col = "#50fa7b",
-		variable = "#f8f8f2",
-		operator = "#ffb86c",
-		string = "#f1fa8c",
-		constant = "#bd93f9",
-		type = "#8be9fd",
-	},
-
-	[33] = {
-		fg = "#d3d7c6",
-		comment = "#5f676a",
-		keyword = "#859900",
-		function_col = "#b58900",
-		variable = "#d3d7c6",
-		operator = "#cb4b16",
-		string = "#657b83",
-		constant = "#dc8adc",
-		type = "#268bd2",
-	},
-
-	[34] = {
-		fg = "#b0c4de",
-		comment = "#4682b4",
-		keyword = "#00ffff",
-		function_col = "#87ceeb",
-		variable = "#b0c4de",
-		operator = "#add8e6",
-		string = "#afeeee",
-		constant = "#e0ffff",
-		type = "#40e0d0",
-	},
-
-	[35] = {
-		fg = "#fdf6e3",
-		comment = "#93a1a1",
-		keyword = "#dc322f",
-		function_col = "#b58900",
-		variable = "#fdf6e3",
-		operator = "#cb4b16",
-		string = "#859900",
-		constant = "#d33682",
-		type = "#268bd2",
-	},
-
-	[36] = {
-		fg = "#ffffff",
-		comment = "#555555",
-		keyword = "#cccccc",
-		function_col = "#eeeeee",
-		variable = "#ffffff",
-		operator = "#aaaaaa",
-		string = "#bbbbbb",
-		constant = "#dddddd",
-		type = "#ffffff",
-	},
-
-	[37] = {
-		fg = "#f8f8f2",
-		comment = "#6272a4",
-		keyword = "#ffb86c",
-		function_col = "#ff79c6",
-		variable = "#f8f8f2",
-		operator = "#8be9fd",
-		string = "#f1fa8c",
-		constant = "#bd93f9",
-		type = "#50fa7b",
-	},
-
-	[38] = {
-		fg = "#f8f8f2",
-		comment = "#6272a4",
-		keyword = "#ff79c6",
-		function_col = "#50fa7b",
-		variable = "#f8f8f2",
-		operator = "#ffb86c",
-		string = "#f1fa8c",
-		constant = "#ffb86c",
-		type = "#8be9fd",
-	},
-
-	[39] = {
-		fg = "#00ff00",
-		comment = "#003b00",
-		keyword = "#00cc00",
-		function_col = "#00ff00",
-		variable = "#00aa00",
-		operator = "#00ff00",
-		string = "#008800",
-		constant = "#00ff00",
-		type = "#00ff00",
-	},
-
-	[40] = {
-		fg = "#f0f8ff",
-		comment = "#708090",
-		keyword = "#b0c4de",
-		function_col = "#afeeee",
-		variable = "#f0f8ff",
-		operator = "#add8e6",
-		string = "#e0ffff",
-		constant = "#f0ffff",
-		type = "#b0e0e6",
-	},
-
-	[41] = {
-		fg = "#e0e0e0",
-		comment = "#6a5acd",
-		keyword = "#da70d6",
-		function_col = "#ba55d3",
-		variable = "#e0e0e0",
-		operator = "#9370db",
-		string = "#ee82ee",
-		constant = "#dda0dd",
-		type = "#9932cc",
-	},
 }
 
-return temas
+return themes

@@ -1,0 +1,12 @@
+echo "===== 1. OBS ====="
+pacman -Q obs-studio 2>/dev/null
+flatpak info com.obsproject.Studio 2>/dev/null | head -n 5
+
+echo "===== 2. PAQUETES DE AUDIO ====="
+pacman -Q | grep -E '^(pipewire|wireplumber|pulseaudio|alsa|lib32-pipewire|rtkit)'
+
+echo "===== 3. SERVICIOS DE AUDIO ====="
+systemctl --user --no-pager status pipewire pipewire-pulse wireplumber
+
+echo "===== 4. MICRÓFONO USB ====="
+lsusb | grep -iE 'razer|audio|microphone'

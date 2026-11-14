@@ -2,13 +2,13 @@ local M = {}
 
 function M.apply(t)
 	local highlights = {
-
 		-- Transparencia
 		Normal = { fg = t.fg, bg = "NONE" },
 		NormalNC = { fg = t.fg, bg = "NONE" },
 		SignColumn = { bg = "NONE" },
 		EndOfBuffer = { fg = t.comment, bg = "NONE" },
 		StatusLine = { fg = t.fg, bg = "NONE" },
+		StatusLineNormal = { fg = t.keyword, bg = t.variable },
 		TabLine = { fg = t.fg, bg = "NONE" },
 
 		-- Lineas y comentarios

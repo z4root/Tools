@@ -1,0 +1,3 @@
+- [ ] Understand all your configuration with iwd + systemd-netword + systemd-resolved
+- [ ] iwd + systemd-networkd + systemd-resolved, Domain how your system works
+- [ ] Bridge, DNS, networkd
