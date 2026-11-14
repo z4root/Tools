@@ -1,3 +1,7 @@
+-- UI (sip)
+require("ui.statusline.init").setup()
+require("ui.themes.init")
+
 -- Opciones y keymaps
 require("core.options")
 require("core.keymaps")
@@ -11,7 +15,3 @@ require("config.lsp") -- nvim-lspconfig + mason-lspconfig
 require("config.conform").setup() -- formateadores (Dolor de cabeza)
 require("config.emmet") -- emmet (miau)
 require("markdown-plus")
-
--- UI (sip)
--- require("ui.statusline")
-require("ui.themes.init")

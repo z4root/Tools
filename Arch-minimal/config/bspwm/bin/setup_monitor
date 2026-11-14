@@ -1,7 +1,6 @@
 #!/bin/sh
 
 XRANDR_OUTPUT=$(xrandr --current)
-
 # Get only two first columns Monitor State,
 # And turn off the monitor if it's unplugged.
 
@@ -43,6 +42,8 @@ set_variables_monitors() {
 	set -- $(get_monitor_info "$1")
 }
 
+#
+#
 #-
 case $NUM_MONITORS in
 0)
@@ -53,12 +54,12 @@ case $NUM_MONITORS in
 	# The argument comes of the first set...
 	monitor_1="$1"
 	set_variables_monitors "$monitor_1"
-	#set -- $(get_monitor_info "$monitor_1")
+	set -- $(get_monitor_info "$monitor_1")
 	mode_1="$1" #-- Resolution
 	rate_1="$2" #-- Rate
 
 	xrandr --output "$monitor_1" --primary --mode "$mode_1" --pos 0x0 --auto --rate "$rate_1"
-	bspc monitor "$monitor_1" -d 1 2 3 4 5 6 7
+	bspc monitor "$monitor_1" -d 1 2 3 4 5 6 7 8 9 10
 	;;
 
 2)
@@ -76,8 +77,8 @@ case $NUM_MONITORS in
 	xrandr --output "$monitor_1" --primary --mode "$mode_1" --pos 0x0 --auto --rate "$rate_1" \
 		--output "$monitor_2" --mode "$mode_2" --right-of "$monitor_1" --auto --rate "$rate_2"
 	# --pos X-Y =  ejmp: 1920x1080 = monitor2   1920x1080 1920(X) x 0(Y)
-	bspc monitor "$monitor_1" -d 1 2 3 4
-	bspc monitor "$monitor_2" -d 5 6 7 8
+	bspc monitor "$monitor_1" -d 1 2 3 4 5
+	bspc monitor "$monitor_2" -d 6 7 8 9 10
 	bspc wm -O "$monitor_1" "$monitor_2"
 	;;
 

@@ -3,7 +3,6 @@ local M = {}
 function M.setup()
 	require("conform").setup({
 		formatters_by_ft = {
-			-- set filetype ?
 			-- Frontend
 			javascript = { "prettier" },
 			typescript = { "prettier" },
@@ -27,6 +26,9 @@ function M.setup()
 			-- C / C++
 			c = { "clang_format" },
 			cpp = { "clang_format" },
+
+			--Yaml
+			yaml = { "yamlfix" },
 		},
 
 		format_on_save = {
