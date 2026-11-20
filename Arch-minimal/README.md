@@ -1,15 +1,18 @@
 <div align="center">
-  <h1>ARCH LINUX MINIMAL</h1>
-  <p align="center">       
-        There’s more behind the code. Explore my ideas, experiments, and thoughts on the <a href="https://use-root.github.io/zeroot.github.io/"><b>BLOG</b></a>
-  </p>
-<ul>
+
+```bash
+      ╭─╮╭─╮╭─╴╷ ╷   ╷  ╷╭╮╷╷ ╷╷ ╷   ╭┬╮╷╭╮╷╷╭┬╮╭─╮╷
+╭─╯   ├─┤├┬╯│  ├─┤   │  ││╰┤│ │╭┼╯   │││││╰┤││││├─┤│     ╭─╯
+      ╵ ╵╵╰╴╰─╴╵ ╵   ╰─╴╵╵ ╵╰─╯╵ ╵   ╵ ╵╵╵ ╵╵╵ ╵╵ ╵╰─╴
+```
+
+    <div display="flex">
+
+        [<kbd> <br> Install <br> </kbd>](#-installation)
+        [<kbd> <br> BLOG <br> </kbd>](https://z4root.github.io/z4root.github.io/)
+    </div>
+
 </div>
-</ul>
-
-## Statusline
-
-[<kbd> <br> Install <br> </kbd>](#-installation)
 
 |                                                                                   |                                                                                   |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -117,7 +120,7 @@ Not included:
 
 ---
 
-## 💾 Installation:
+## Installation:
 
 > Works for **ARCH** Linux, and based distros!
 
