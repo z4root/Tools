@@ -6,11 +6,10 @@
       ╵ ╵╵╰╴╰─╴╵ ╵   ╰─╴╵╵ ╵╰─╯╵ ╵   ╵ ╵╵╵ ╵╵╵ ╵╵ ╵╰─╴
 ```
 
-    <div display="flex">
-
-        [<kbd> <br> Install <br> </kbd>](#-installation)
-        [<kbd> <br> BLOG <br> </kbd>](https://z4root.github.io/z4root.github.io/)
-    </div>
+<div display="flex">
+    [<kbd> <br> Install <br> </kbd>](#-installation)
+    [<kbd> <br> BLOG <br> </kbd>](https://z4root.github.io/z4root.github.io/)
+</div>
 
 </div>
 
